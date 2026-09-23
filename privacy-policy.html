@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Source of truth: beatbox-hero/src/constants/legal/politique-de-confidentialite.md -->
     <title>Politique de Confidentialité - Phonemia Beatbox</title>
     <style>
         body {
@@ -29,6 +30,10 @@
             color: #7b1fa2;
             margin-top: 30px;
         }
+        h3 {
+            color: #8e24aa;
+            margin-top: 20px;
+        }
         .last-updated {
             color: #666;
             font-style: italic;
@@ -44,146 +49,137 @@
             border-radius: 5px;
             margin-top: 30px;
         }
+        a {
+            color: #6a1b9a;
+        }
+        .related-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.95em;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Politique de Confidentialité</h1>
-        <p class="last-updated">Dernière mise à jour : 20 avril 2026</p>
+        <h1>Politique de confidentialité</h1>
+
+        <p class="last-updated">Dernière mise à jour : 22 septembre 2026</p>
 
         <h2>1. Introduction</h2>
-        <p>
-            Phonemia Beatbox ("nous", "notre", "l'application") respecte votre vie privée. 
-            Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons 
-            vos informations lorsque vous utilisez notre application mobile.
-        </p>
+
+        <p>Phonemia Beatbox (« nous », « l'application ») respecte votre vie privée. Cette politique explique quelles informations nous collectons réellement, pourquoi, et avec qui elles sont partagées lorsque vous utilisez l'application mobile.</p>
 
         <h2>2. Informations que nous collectons</h2>
-        
-        <h3>2.1. Données audio</h3>
-        <p>
-            Notre application nécessite l'accès au microphone de votre appareil pour :
-        </p>
-        <ul>
-            <li>Détecter et classifier les sons beatbox en temps réel</li>
-            <li>Permettre le gameplay interactif</li>
-        </ul>
-        <p>
-            <strong>Important :</strong> Les données audio sont traitées uniquement en temps réel sur votre appareil. 
-            Nous ne stockons pas, n'enregistrons pas, ni ne transmettons vos enregistrements audio à nos serveurs 
-            ou à des tiers. Tout le traitement audio s'effectue localement sur votre appareil.
-        </p>
 
-        <h3>2.2. Données de compte utilisateur</h3>
-        <p>
-            Si vous créez un compte dans l'application, nous pouvons collecter :
-        </p>
+        <h3>2.1. Données audio (microphone)</h3>
+
+        <p>L'application a besoin du <strong>microphone</strong> de l'appareil pour détecter et classer les sons beatbox en <strong>temps réel</strong>, afin de faire fonctionner les exercices.</p>
+
+        <p><strong>Important :</strong> le traitement audio s'effectue uniquement sur votre appareil. Aucun fichier audio n'est stocké, enregistré ou transmis à nos serveurs ou à des tiers.</p>
+
+        <p>Pour certains jeux, nous enregistrons uniquement les <strong>sorties du classificateur</strong> (classe reconnue, probabilités, volume), jamais l'enregistrement sonore.</p>
+
+        <h3>2.2. Données de compte et de profil</h3>
+
+        <p>Un compte Auth0 est nécessaire. Nous collectons :</p>
+
         <ul>
-            <li>Nom d'utilisateur</li>
-            <li>Adresse e-mail (si fournie)</li>
-            <li>Informations de profil (si fournies)</li>
+            <li>l'<strong>identifiant</strong> Auth0 et l'adresse <strong>e-mail</strong> du compte ;</li>
+            <li>le <strong>prénom</strong>, le <strong>nom</strong> et la <strong>date de naissance</strong> saisis dans l'application (y compris lorsqu'un parent / tuteur crée le profil d'un enfant) ;</li>
+            <li>le type d'appareil (<strong>iOS</strong>, <strong>Android</strong> ou Web).</li>
         </ul>
 
-        <h3>2.3. Données d'utilisation</h3>
-        <p>
-            Nous pouvons collecter des données anonymes sur l'utilisation de l'application pour améliorer 
-            nos services, telles que :
-        </p>
-        <ul>
-            <li>Fonctionnalités utilisées</li>
-            <li>Erreurs techniques (logs anonymisés)</li>
-            <li>Performances de l'application</li>
-        </ul>
+        <p>Nous ne collectons pas de langue préférée, de niveau déclaré ni d'objectifs pédagogiques.</p>
 
-        <h2>3. Comment nous utilisons vos informations</h2>
-        <p>Nous utilisons les informations collectées pour :</p>
+        <h3>2.3. Données d'activité et de progression</h3>
+
+        <p>Nous collectons les résultats des exercices et la <strong>progression</strong> : <strong>scores</strong>, durées, pauses, enchaînements validés ou manqués, obstacles évités, tempo du métronome, orbes, séries, tutoriels terminés, activités du jour, meilleur score, réglages de jeu, et date de dernière connexion.</p>
+
+        <p>Une copie récente de ces sessions est aussi conservée sur l'appareil.</p>
+
+        <h3>2.4. Analyse d'usage</h3>
+
+        <p>Nous utilisons <strong>Amplitude</strong> (zone UE par défaut) pour les écrans visités et les actions dans l'application.</p>
+
+        <h3>2.5. Abonnement</h3>
+
+        <p>Le statut d'<strong>abonnement</strong> et les informations d'achat sont gérés par <strong>RevenueCat</strong> et par l'App Store / Google Play. L'identifiant de compte Auth0 est associé à cet abonnement. Nous ne stockons pas les numéros de carte bancaire.</p>
+
+        <h2>3. Comment nous utilisons ces informations</h2>
+
+        <p>Nous les utilisons pour :</p>
+
         <ul>
-            <li>Fournir et améliorer les fonctionnalités de l'application</li>
-            <li>Personnaliser votre expérience utilisateur</li>
-            <li>Analyser l'utilisation de l'application pour améliorer nos services</li>
-            <li>Résoudre les problèmes techniques</li>
+            <li>fournir le compte, les exercices, la progression et les statistiques ;</li>
+            <li>personnaliser l'expérience et améliorer l'application ;</li>
+            <li>gérer l'abonnement ;</li>
+            <li>diagnostiquer les problèmes techniques.</li>
         </ul>
 
         <h2>4. Partage de vos informations</h2>
-        <p>
-            Nous ne vendons, ne louons, ni ne partageons vos informations personnelles avec des tiers, 
-            sauf dans les cas suivants :
-        </p>
+
+        <p>Nous ne vendons pas vos données. Nous les partageons uniquement avec les prestataires nécessaires :</p>
+
         <ul>
-            <li><strong>Fournisseurs de services :</strong> Nous pouvons partager des données avec des 
-                prestataires de services qui nous aident à exploiter notre application (hébergement, 
-                analytics), sous réserve qu'ils respectent cette politique de confidentialité.</li>
-            <li><strong>Obligations légales :</strong> Nous pouvons divulguer vos informations si la loi 
-                l'exige ou pour protéger nos droits.</li>
+            <li><strong>Auth0</strong> : authentification ;</li>
+            <li>notre API (hébergement des profils, sessions et statistiques) ;</li>
+            <li><strong>Amplitude</strong> : analyse d'usage (écrans et actions) ;</li>
+            <li><strong>RevenueCat</strong>, Apple et Google : achats et abonnement ;</li>
+            <li>autorités, si la loi l'exige.</li>
         </ul>
 
-        <h2>5. Sécurité des données</h2>
-        <p>
-            Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos informations 
-            contre l'accès non autorisé, la modification, la divulgation ou la destruction. Cependant, 
-            aucune méthode de transmission sur Internet ou de stockage électronique n'est totalement sécurisée.
-        </p>
+        <h2>5. Sécurité</h2>
+
+        <p>Nous appliquons des mesures raisonnables pour protéger vos données. Aucune transmission ou stockage électronique n'est totalement sécurisé.</p>
 
         <h2>6. Vos droits</h2>
-        <p>Vous avez le droit de :</p>
+
+        <p>Vous pouvez :</p>
+
         <ul>
-            <li>Accéder à vos données personnelles</li>
-            <li>Demander la correction de données inexactes</li>
-            <li>Demander la suppression de vos données</li>
-            <li>Vous opposer au traitement de vos données</li>
-            <li>Demander la portabilité de vos données</li>
+            <li>accéder à vos données et demander leur correction ;</li>
+            <li><strong>supprimer</strong> votre compte depuis l'écran Profil de l'application ;</li>
+            <li>demander un export ou vous opposer au traitement en écrivant à <strong>contact@phonemia.com</strong> ;</li>
+            <li>retirer votre consentement, sans justification.</li>
         </ul>
-        <p>
-            Pour exercer ces droits, contactez-nous à l'adresse indiquée dans la section "Contact" ci-dessous.
-        </p>
 
         <h2>7. Permissions de l'application</h2>
-        <p>Notre application demande les permissions suivantes :</p>
+
         <ul>
-            <li><strong>Microphone (RECORD_AUDIO) :</strong> Nécessaire pour capturer l'audio en temps réel 
-                afin de détecter et classifier les sons beatbox pendant le gameplay. Les données audio 
-                sont traitées uniquement localement sur votre appareil.</li>
-            <li><strong>Modifier les paramètres audio (MODIFY_AUDIO_SETTINGS) :</strong> Permet d'optimiser 
-                les paramètres audio pour une meilleure expérience utilisateur.</li>
+            <li><strong>Microphone (RECORD_AUDIO)</strong> : capture en temps réel pour classer les sons beatbox. L'audio n'est pas envoyé hors de l'appareil.</li>
+            <li><strong>Modifier les paramètres audio (MODIFY_AUDIO_SETTINGS)</strong> : optimisation de la lecture et de la capture sur l'appareil.</li>
         </ul>
 
-        <h2>8. Traitement des données pour les enfants</h2>
-        <p>
-            Si notre application cible des utilisateurs de moins de 13 ans, nous nous conformons aux 
-            exigences du COPPA (Children's Online Privacy Protection Act) et autres réglementations 
-            applicables concernant la collecte de données d'enfants.
-        </p>
+        <h2>8. Enfants</h2>
 
-        <h2>9. Modifications de cette politique</h2>
-        <p>
-            Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous vous 
-            informerons de tout changement en publiant la nouvelle politique sur cette page et en mettant 
-            à jour la date de "Dernière mise à jour".
-        </p>
+        <p>L'application peut être utilisée par un enfant, y compris de <strong>moins de 16 ans</strong>, uniquement si un parent ou tuteur crée le profil et donne son consentement à l'inscription. Dans ce cas, le prénom, le nom et la date de naissance collectés sont ceux de l'enfant, et le consentement est donné par l'adulte. Un profil enfant contient les mêmes données qu'un profil adulte.</p>
+
+        <h2>9. Modifications</h2>
+
+        <p>Nous pouvons mettre à jour cette politique. La date de « Dernière mise à jour » en haut de page sera alors modifiée.</p>
 
         <h2>10. Contact</h2>
         <div class="contact">
             <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter :</p>
             <p>
-                <strong>Email :</strong> contact@phonemia.com<br>
-                <strong>Site web :</strong> https://www.phonemia.com
+                <strong>Adresse :</strong> Avenue de la Vogéaz, 1110 Morges, Suisse<br>
+                <strong>Email :</strong> <a href="mailto:contact@phonemia.com">contact@phonemia.com</a><br>
+                <strong>Site web :</strong> <a href="https://www.phonemia.com">https://www.phonemia.com</a>
             </p>
         </div>
 
         <h2>11. Consentement</h2>
-        <p>
-            En utilisant notre application, vous consentez à notre politique de confidentialité et acceptez 
-            ses termes.
-        </p>
-    </div>
 
-    <script>
-        document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    </script>
+        <p>En utilisant l'application et en acceptant les conditions d'utilisation, vous consentez à cette politique de confidentialité. Si le profil concerne un enfant de moins de 16 ans, ce consentement est donné par le parent ou le représentant légal.</p>
+
+        <div class="related-links">
+            <p><strong>Documents associés :</strong></p>
+            <ul>
+                <li><a href="terms-of-use.html">Conditions générales d'utilisation</a></li>
+                <li><a href="delete-account.html">Suppression de vos données</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
-
